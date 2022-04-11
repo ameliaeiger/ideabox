@@ -1,3 +1,19 @@
+.throwaway-grid-container {
+  display: flex;
+  background-color: #EAEAF4;
+}
+
+.throwaway-mainpage {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.throwaway-ali {
+  display: flex;
+  height: 1500px;
+}
+
 html, body, main {
   height: 100%;
   margin: 0;
@@ -42,25 +58,28 @@ main {
   font-size: x-large;
 }
 
-/* BACKGROUND COLOR: #EAEAF4 */
 img {
   height: 25px;
   width: 25px;
 }
 
-.idea-card-section {
-  display: flex;
-  background-color: #EAEAF4;
+.idea-card-grid {
+  display: grid;
+  grid-template-columns: 250px 250px 250px;
+  grid-template-rows: 250px 250px;
+  gap: 10px;
+  margin: 25px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   background-color: white;
-  margin: 25px;
   border: 2px solid #1F1F3D;
   /*REMOVE BELOW WHEN APPLYING GRID*/
-  max-width: 225px;
+  /* max-width: 225px; */
+/*  max-height: 225px; */
+justify-content: space-between;
 }
 
 .header {
