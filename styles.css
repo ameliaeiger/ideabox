@@ -1,0 +1,43 @@
+html, body, main {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  display: flex;
+}
+
+.side-bar {
+  background-color: #1F1F3D;
+  width: 20%;
+  height: 841px;
+}
+
+.nav-title {
+  color: #E9E9F3;
+  margin-top: 0px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #353567;
+}
+
+.starred-section {
+  height: 125px;
+  border-bottom: 2px solid #353567;
+}
+
+.filter {
+  color: #BFBFDD;
+  padding-left: 20px;
+  padding-bottom: 8px;
+}
+
+.show-starred-button {
+  background-color: #5356A4;
+  color: #E9E9F3;
+  margin-left: 20px;
+  height: 50px;
+  width: 85%;
+  font-size: x-large;
+}
