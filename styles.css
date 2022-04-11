@@ -41,3 +41,56 @@ main {
   width: 85%;
   font-size: x-large;
 }
+
+/* BACKGROUND COLOR: #EAEAF4 */
+img {
+  height: 25px;
+  width: 25px;
+}
+
+.idea-card-section {
+  display: flex;
+  background-color: #EAEAF4;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: 25px;
+  border: 2px solid #1F1F3D;
+  /*REMOVE BELOW WHEN APPLYING GRID*/
+  max-width: 225px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  background-color: #1F1F3D;
+}
+
+.title {
+  font-weight: bold;
+  margin: 0px;
+}
+
+
+.text-holder {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.footer-text {
+  margin: 0px;
+}
+
+.footer {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  color: #E9E9F3;
+  background-color: #5356A4;
+  border-top: 2px solid #1F1F3D;
+}
