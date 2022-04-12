@@ -106,3 +106,69 @@ img {
   display: flex;
   background-color: #EAEAF4;
 }
+
+/* background: #A9AAD2 //for background box
+Hex value: #FFFFFF //for text background
+Hex value: #1F1F3D //for title and body text font
+Hex value: #5356A4 //for save button background
+Hex value: #E9E9F3 //for save button font color
+Hex value: #353567 //for border around  */
+
+
+.form {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-container {
+  background-color: #A9AAD2;
+  display: flex;
+  justify-content: center;
+  padding: 75px;
+}
+
+.form-container {
+  border: 2px solid black;
+  height: 500px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-color {
+  background-color: #1F1F3D;
+}
+
+.button-container {
+  display: flex;
+}
+
+.form < label {
+background-color: #FFFFFF;
+/* font-family: */
+font-size: 14px;
+color: #1F1F3D;
+border-color: #353567;
+border-width: thin;
+display: flex;
+
+}
+
+.form > button {
+background-color: #5356A4;
+/* font-family: */
+font-size: 14px;
+color: #E9E9F3;
+border-color: #353567;
+border-width: thin;
+display: flex;
+flex-direction: center;
+padding: 10px;
+margin: 0px;
