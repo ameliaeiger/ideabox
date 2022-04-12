@@ -6,39 +6,121 @@
   </head>
   <body>
     <main>
-      <nav>
-        <h1>IdeaBox</h1>
-        <section>
-          <h3>Filter Starred Ideas</h3>
-          <button>Show Starred Ideas</button>
+      <nav class="side-bar">
+        <h1 class="nav-title">IdeaBox</h1>
+        <section class="starred-section">
+          <h3 class="filter">Filter Starred Ideas</h3>
+          <button class="show-starred-button">Show Starred Ideas</button>
         </section>
       </nav>
-      <section>
+      <div class="main-content">
+        <section class="section-container">
+        <div class="form-container">
         <form class="form">
           <label for="title">Title</label>
           <input type="text" id="title">
           <label for="body">Body</label>
           <input type"text" id="body">
           <button>Save</button>
-          <button>insert icon</button>
+          <div class="button-container">
+            <button class="button-color"><img src="assets/search.svg"><button>
+            <input type= "search" id="query" name="search"
+            placeholder="Search ideas">
+          </div>
         </form>
+      </div>
       </section>
-      <section>
-        <article>
-          <header>
+      <!-- Throwaway Below -->
+    <div class="throwaway-grid-container">
+    <!-- Above -->
+      <section  class="idea-card-grid">
+        <article class="idea-card card">
+          <header class="idea-card header">
             <img src="assets/star-active.svg">
-            <img src="assets/delete-active.svg">
+            <img src="assets/delete.svg">
           </header>
-          <h3>Idea title</h3>
+          <div class="text-holder">
+          <h3 class="title idea-card">Idea title</h3>
           <p>
-            Content Here
+            Idea body. Don't ever play yourself. Every chance I get, I water the plants, Lion! Cloth talk.
           </p>
-          <footer>
+          </div>
+          <footer class="footer idea-card">
             <img src="assets/comment.svg">
-            Comment
+            <p class="footer-text">Comment</p>
           </footer>
         </article>
+<!-- BEGIN PLACEHOLDER CARDS -->
+<article class="idea-card card">
+  <header class="idea-card header">
+    <img src="assets/star-active.svg">
+    <img src="assets/delete.svg">
+  </header>
+  <div class="text-holder">
+  <h3 class="title idea-card">Idea title</h3>
+  <p>
+    Idea body. Don't ever play yourself. Every chance I get, I water the plants, Lion! Cloth talk.
+  </p>
+  </div>
+  <footer class="footer idea-card">
+    <img src="assets/comment.svg">
+    <p class="footer-text">Comment</p>
+  </footer>
+</article>
+<article class="idea-card card">
+  <header class="idea-card header">
+    <img src="assets/star-active.svg">
+    <img src="assets/delete.svg">
+  </header>
+  <div class="text-holder">
+  <h3 class="title idea-card">Idea title</h3>
+  <p>
+    Idea body. Don't ever play yourself. Every chance I get, I water the plants, Lion! Cloth talk.
+  </p>
+  </div>
+  <footer class="footer idea-card">
+    <img src="assets/comment.svg">
+    <p class="footer-text">Comment</p>
+  </footer>
+</article>
+<article class="idea-card card">
+  <header class="idea-card header">
+    <img src="assets/star-active.svg">
+    <img src="assets/delete.svg">
+  </header>
+  <div class="text-holder">
+  <h3 class="title idea-card">Idea title</h3>
+  <p>
+    Idea body. Don't ever play yourself. Every chance I get, I water the plants, Lion! Cloth talk.
+  </p>
+  </div>
+  <footer class="footer idea-card">
+    <img src="assets/comment.svg">
+    <p class="footer-text">Comment</p>
+  </footer>
+</article>
+<article class="idea-card card">
+  <header class="idea-card header">
+    <img src="assets/star-active.svg">
+    <img src="assets/delete.svg">
+  </header>
+  <div class="text-holder">
+  <h3 class="title idea-card">Idea title</h3>
+  <p>
+    Idea body. Don't ever play yourself. Every chance I get, I water the plants, Lion! Cloth talk.
+  </p>
+  </div>
+  <footer class="footer idea-card">
+    <img src="assets/comment.svg">
+    <p class="footer-text">Comment</p>
+  </footer>
+</article>
+<!-- END PLACEHOLDER CARDS -->
       </section>
+  <!-- Throwaway Below -->
+  </div>
+</div>
+  <!-- Above -->
     </main>
     <script src="main.js"></script>
     <script src="idea.js"></script>
