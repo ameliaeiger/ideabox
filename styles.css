@@ -24,7 +24,9 @@ main {
 }
 
 .starred-section {
-  height: 125px;
+  /* height: 125px; */
+  /* margin-bottom: 20px; */
+  padding-bottom: 10px;
   border-bottom: 2px solid #353567;
 }
 
@@ -38,9 +40,11 @@ main {
   background-color: #5356A4;
   color: #E9E9F3;
   margin-left: 20px;
-  height: 50px;
+  margin-bottom: 20px;
+  padding: 10px;
   width: 85%;
   font-size: x-large;
+  border: 2px solid #353567;
 }
 
 img {
