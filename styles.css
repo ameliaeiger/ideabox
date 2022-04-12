@@ -5,6 +5,7 @@ html, body, main {
 
 main {
   display: flex;
+  justify-content: center;
 }
 
 .side-bar {
@@ -42,25 +43,26 @@ main {
   font-size: x-large;
 }
 
-/* BACKGROUND COLOR: #EAEAF4 */
 img {
   height: 25px;
   width: 25px;
 }
 
-.idea-card-section {
-  display: flex;
-  background-color: #EAEAF4;
+.idea-card-grid {
+  display: grid;
+  grid-template-columns: 210px 210px 210px;
+  grid-template-rows: 250px 250px;
+  gap: 10px;
+  margin: 25px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
+  color: #1F1F3D;
   background-color: white;
-  margin: 25px;
   border: 2px solid #1F1F3D;
-  /*REMOVE BELOW WHEN APPLYING GRID*/
-  max-width: 225px;
+  justify-content: space-between;
 }
 
 .header {
@@ -83,6 +85,7 @@ img {
 }
 
 .footer-text {
+  color: #E9E9F3;
   margin: 0px;
 }
 
@@ -93,4 +96,9 @@ img {
   color: #E9E9F3;
   background-color: #5356A4;
   border-top: 2px solid #1F1F3D;
+}
+
+.throwaway-grid-container {
+  display: flex;
+  background-color: #EAEAF4;
 }
