@@ -1,7 +1,6 @@
 // Global variables:
 var ideaList = [];
 var favoriteIdeas = [];
-var brandNewIdea;
 
 // Query Selectors:
 var saveButton = document.querySelector(".save-button");
@@ -13,15 +12,15 @@ saveButton.addEventListener("click", saveIdea);
 
 function saveIdea() {
   event.preventDefault();
-  console.log("event", event);
-  createNewInstance(formTitle.value, formBody.value);
+  var brandNewIdea = createNewInstance(formTitle.value, formBody.value);
+  pushToArray(brandNewIdea);
 }
 
 
 function createNewInstance(title, body) {
-   brandNewIdea = new Idea(title, body);
+   return new Idea(title, body);
 }
 
-function pushToArray() {
-  ideaList.push(brandNewIdea)
+function pushToArray(brandNewIdea) {
+  ideaList.push(brandNewIdea);
 }
