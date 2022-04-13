@@ -8,6 +8,42 @@ main {
   justify-content: center;
 }
 
+button {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+input {
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+#query {
+  display: flex;
+  padding: 7px;
+}
+
+.extradiv {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+
+.text-input {
+  height: 50%;
+}
+
+.save-button {
+  background-color: #5356A4;
+  margin: 0px;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
 .side-bar {
   background-color: #1F1F3D;
   width: 20%;
@@ -99,7 +135,6 @@ img {
   align-items: center;
   color: #E9E9F3;
   background-color: #5356A4;
-  border-top: 2px solid #1F1F3D;
 }
 
 .throwaway-grid-container {
@@ -107,36 +142,28 @@ img {
   background-color: #EAEAF4;
 }
 
-/* background: #A9AAD2 //for background box
-Hex value: #FFFFFF //for text background
-Hex value: #1F1F3D //for title and body text font
-Hex value: #5356A4 //for save button background
-Hex value: #E9E9F3 //for save button font color
-Hex value: #353567 //for border around  */
-
-
 .form {
-  overflow: hidden;
   display: flex;
   flex-direction: column;
+  margin: 25px;
 }
 
 .section-container {
   background-color: #A9AAD2;
   display: flex;
   justify-content: center;
-  padding: 75px;
+  padding: 25px;
 }
 
-.form-container {
+/* .form-container {
   border: 2px solid black;
   height: 500px;
   width: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
+} */
 
-}
 .main-content {
   display: flex;
   flex-direction: column;
@@ -148,6 +175,10 @@ Hex value: #353567 //for border around  */
 
 .button-container {
   display: flex;
+  align-items: center;
+  border: thin solid #5356A4;
+  border-radius: 2px;
+
 }
 
 .form < label {
