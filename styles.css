@@ -36,7 +36,7 @@ input {
 }
 
 .save-button {
-  background-color: #5356A4;
+  background-color: #EAEAF4;
   margin: 0px;
   width: 100%;
   margin-bottom: 15px;
@@ -44,8 +44,8 @@ input {
   padding: 5px;
 }
 
-.save-button:hover {
-  background-color: #EAEAF4;
+.active:hover {
+  background-color: #5356A4;
   cursor: pointer;
 }
 

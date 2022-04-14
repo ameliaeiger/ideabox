@@ -21,6 +21,7 @@ saveButton.addEventListener("click", saveIdea);
 
 saveButton.addEventListener("click", clearInput);
 
+saveButton.addEventListener("mouseover", updateClass);
 // Functions and event handlers:
 
 
@@ -70,6 +71,14 @@ function pushToArray(brandNewIdea) {
 function clearInput() {
   formTitle.value = '';
   formBody.value = '';
+}
+
+function updateClass() {
+  if (formBody.value && formTitle.value) {
+  saveButton.classList.add("active");
+  } else if (!formBody.value && !formTitle.value) {
+  saveButton.classList.remove("active");
+}
 }
 
 
