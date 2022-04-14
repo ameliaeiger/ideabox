@@ -21,14 +21,17 @@ saveButton.addEventListener("click", saveIdea);
 
 saveButton.addEventListener("click", clearInput);
 
+saveButton.addEventListener("mouseover", updateClass);
 // Functions and event handlers:
 
 
 //   Instantiates new idea(object) >> pushes idea(object) to array
 function saveIdea() {
   event.preventDefault();
+  if (formBody.value && formTitle.value) {
   brandNewIdea = createNewInstance(formTitle.value, formBody.value);
   renderDisplay(brandNewIdea.title, brandNewIdea.body);
+  }
 }
 
 function renderDisplay(title, body) {
@@ -36,14 +39,13 @@ function renderDisplay(title, body) {
     console.log("no")
   } else {
     ideaList.push(brandNewIdea);
-    for (let i = 0; i < ideaList.length; i++) {
-      let htmlString = ideaList[i].generateHtml();
+      let htmlString = brandNewIdea.generateHtml();
       let inner = document.createElement("div");
       inner.innerHTML = htmlString
       savedCardSection.appendChild(inner)
     }
   }
-}
+
 
 // -- Checks ideaList for a duplicate card
 function checkForDuplicate(title, body) {
@@ -69,6 +71,14 @@ function pushToArray(brandNewIdea) {
 function clearInput() {
   formTitle.value = '';
   formBody.value = '';
+}
+
+function updateClass() {
+  if (formBody.value && formTitle.value) {
+  saveButton.classList.add("active");
+  } else if (!formBody.value && !formTitle.value) {
+  saveButton.classList.remove("active");
+}
 }
 
 

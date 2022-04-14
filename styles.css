@@ -36,12 +36,17 @@ input {
 }
 
 .save-button {
-  background-color: #5356A4;
+  background-color: #EAEAF4;
   margin: 0px;
   width: 100%;
   margin-bottom: 15px;
   margin-top: 10px;
   padding: 5px;
+}
+
+.active:hover {
+  background-color: #5356A4;
+  cursor: pointer;
 }
 
 .side-bar {
@@ -60,8 +65,6 @@ input {
 }
 
 .starred-section {
-  /* height: 125px; */
-  /* margin-bottom: 20px; */
   padding-bottom: 10px;
   border-bottom: 2px solid #353567;
 }
