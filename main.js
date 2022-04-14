@@ -13,9 +13,13 @@ var formBody = document.getElementById("body");
 var newCardTitle = document.getElementById("new-title");
 var newCardBody = document.getElementById('new-body');
 let savedCardSection = document.querySelector(".throwaway-grid-container")
+
+// let clearInputFields = document.getElementById("title");
 // Event listeners:
 
 saveButton.addEventListener("click", saveIdea);
+
+saveButton.addEventListener("click", clearInput);
 
 // Functions and event handlers:
 
@@ -28,11 +32,11 @@ function saveIdea() {
 }
 
 function renderDisplay(title, body) {
-  if (checkForDuplicate(title, body) === "Taken"){
+  if (checkForDuplicate(title, body) === "Taken") {
     console.log("no")
   } else {
     ideaList.push(brandNewIdea);
-  for (let i=0; i<ideaList.length; i++){
+    for (let i = 0; i < ideaList.length; i++) {
       let htmlString = ideaList[i].generateHtml();
       let inner = document.createElement("div");
       inner.innerHTML = htmlString
@@ -43,7 +47,7 @@ function renderDisplay(title, body) {
 
 // -- Checks ideaList for a duplicate card
 function checkForDuplicate(title, body) {
-  for (let i=0; i<ideaList.length; i++){
+  for (let i = 0; i < ideaList.length; i++) {
     if (ideaList[i].body === body && ideaList[i].title === title) {
       console.log("Taken")
       return "Taken"
@@ -61,6 +65,12 @@ function createNewInstance(title, body) {
 function pushToArray(brandNewIdea) {
   ideaList.push(brandNewIdea);
 }
+
+function clearInput() {
+  formTitle.value = '';
+  formBody.value = '';
+}
+
 
 // function updateIdeaCard() {
 //   newCardTitle.innerText = brandNewIdea.title;
