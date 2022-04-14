@@ -44,6 +44,11 @@ input {
   padding: 5px;
 }
 
+.save-button:hover {
+  background-color: #EAEAF4;
+  cursor: pointer;
+}
+
 .side-bar {
   background-color: #1F1F3D;
   width: 20%;
@@ -60,8 +65,6 @@ input {
 }
 
 .starred-section {
-  /* height: 125px; */
-  /* margin-bottom: 20px; */
   padding-bottom: 10px;
   border-bottom: 2px solid #353567;
 }
