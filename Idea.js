@@ -14,8 +14,7 @@ class Idea {
     }
   }
   generateHtml() {
-    let string = `<section class="idea-card-grid">
-      <article class="idea-card card">
+    let string = `<article class="idea-card card">
         <header class="idea-card header">
           <img src="assets/star-active.svg">
           <img src="assets/delete.svg">

@@ -14,12 +14,18 @@ var newCardTitle = document.getElementById("new-title");
 var newCardBody = document.getElementById('new-body');
 let savedCardSection = document.querySelector(".throwaway-grid-container")
 
-// let clearInputFields = document.getElementById("title");
 // Event listeners:
 
 saveButton.addEventListener("click", saveIdea);
-
 saveButton.addEventListener("click", clearInput);
+saveButton.addEventListener("mouseover", validateForm);
+
+function validateForm() {
+  if (formBody.value && formTitle.value) {
+    saveButton.classList.add("active")
+    return true;
+  }
+}
 
 // Functions and event handlers:
 
@@ -27,21 +33,21 @@ saveButton.addEventListener("click", clearInput);
 //   Instantiates new idea(object) >> pushes idea(object) to array
 function saveIdea() {
   event.preventDefault();
+  if (formBody.value && formTitle.value){
   brandNewIdea = createNewInstance(formTitle.value, formBody.value);
   renderDisplay(brandNewIdea.title, brandNewIdea.body);
+  }
 }
 
 function renderDisplay(title, body) {
   if (checkForDuplicate(title, body) === "Taken") {
     console.log("no")
   } else {
-    ideaList.push(brandNewIdea);
-    for (let i = 0; i < ideaList.length; i++) {
-      let htmlString = ideaList[i].generateHtml();
+      ideaList.push(brandNewIdea);
+      let htmlString = brandNewIdea.generateHtml();
       let inner = document.createElement("div");
       inner.innerHTML = htmlString
       savedCardSection.appendChild(inner)
-    }
   }
 }
 
@@ -54,7 +60,6 @@ function checkForDuplicate(title, body) {
     }
   }
 }
-
 
 //   Instantiates new idea(object)
 function createNewInstance(title, body) {
@@ -70,13 +75,3 @@ function clearInput() {
   formTitle.value = '';
   formBody.value = '';
 }
-
-
-// function updateIdeaCard() {
-//   newCardTitle.innerText = brandNewIdea.title;
-//   newCardBody.innerText = brandNewIdea.body;
-// }
-
-// function insertObjectDataToNewCard(string) {
-//     savedCardSection.innerHTML = string
-// }
