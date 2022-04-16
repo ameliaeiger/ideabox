@@ -8,19 +8,20 @@ class Idea {
 
   updateIdea() {
     if (!this.star) {
-    this.star = true;
-  } else if (this.star) {
+      this.star = true;
+    } else if (this.star) {
       this.star = false;
     }
   }
+
   generateHtml() {
-    let string = `<article class="idea-card card">
+    let string = `<article class="idea-card card" id="${this.id}">
         <header class="idea-card header">
           <img src="assets/star-active.svg">
-          <img src="assets/delete.svg">
+          <img class="deletable" src="assets/delete.svg">
         </header>
         <div class="text-holder">
-        <h3 class="title idea-card" id="${this.id}">${this.title}</h3>
+        <h3 class="title idea-card">${this.title}</h3>
         <p id="new-body">${this.body}
         </p>
         </div>
@@ -29,6 +30,8 @@ class Idea {
           <p class="footer-text">Comment</p>
         </footer>
       </article>`
+      
       return string
   }
+
 }
