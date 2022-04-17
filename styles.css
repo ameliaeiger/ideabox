@@ -91,21 +91,31 @@ img {
   width: 25px;
 }
 
-.idea-card-grid {
+.grid-container {
   display: grid;
   grid-template-columns: 210px 210px 210px;
   grid-template-rows: 250px 250px;
   gap: 10px;
-  margin: 25px;
+}
+
+.savedGridContainer{
+  background-color: #EAEAF4;
+  padding: 25px;
+}
+
+.cardDiv {
+  display: flex;
 }
 
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   color: #1F1F3D;
   background-color: white;
   border: 2px solid #1F1F3D;
-  justify-content: space-between;
+  word-break: break-all;
+  min-width: 210px;
 }
 
 .header {
@@ -125,6 +135,7 @@ img {
   display: flex;
   flex-direction: column;
   margin: 10px;
+  flex-wrap: wrap;
 }
 
 .footer-text {
@@ -138,11 +149,6 @@ img {
   align-items: center;
   color: #E9E9F3;
   background-color: #5356A4;
-}
-
-.throwaway-grid-container {
-  display: flex;
-  background-color: #EAEAF4;
 }
 
 .form {

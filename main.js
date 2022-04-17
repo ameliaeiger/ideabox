@@ -12,7 +12,7 @@ var formTitle = document.getElementById("title");
 var formBody = document.getElementById("body");
 var newCardTitle = document.getElementById("new-title");
 var newCardBody = document.getElementById('new-body');
-let savedCardSection = document.querySelector(".throwaway-grid-container")
+let savedCardSection = document.querySelector(".grid-container")
 
 // let clearInputFields = document.getElementById("title");
 // Event listeners:
@@ -62,6 +62,7 @@ function renderDisplay() {
 function insertToDom(ideaObject) {
   let htmlString = ideaObject.generateHtml();
   let inner = document.createElement("div");
+  inner.classList.add("cardDiv")
   inner.innerHTML = htmlString
   savedCardSection.appendChild(inner);
 }
