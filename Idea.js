@@ -22,7 +22,7 @@ class Idea {
         </header>
         <div class="text-holder">
         <h3 class="title idea-card">${this.title}</h3>
-        <p id="new-body">${this.body}
+        <p class="body-text">${this.body}
         </p>
         </div>
         <footer class="footer idea-card">
@@ -30,7 +30,7 @@ class Idea {
           <p class="footer-text">Comment</p>
         </footer>
       </article>`
-      
+
       return string
   }
 
