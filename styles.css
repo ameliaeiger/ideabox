@@ -3,8 +3,17 @@
   src: url("./assets/OpenSans-Bold.ttf");
 }
 
+@font-face {
+  font-family: "light";
+  src: url("./assets/OpenSans-Light.ttf");
+}
+
 h1, h2, h3, label, button {
   font-family: "bold";
+}
+
+h3 {
+  font-size: 15px;
 }
 
 html, body, main {
@@ -24,9 +33,9 @@ button {
 }
 
 input {
-  border: 0px;
   padding: 0px;
   margin: 0px;
+  border: 1px solid #5356A4;
 }
 
 #query {
@@ -51,6 +60,7 @@ input {
   margin-bottom: 15px;
   margin-top: 10px;
   padding: 5px;
+  border: 1px solid #5356A4;
 }
 
 .active:hover {
@@ -93,6 +103,10 @@ input {
   width: 85%;
   font-size: x-large;
   border: 2px solid #353567;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 img {
@@ -127,6 +141,11 @@ img {
   min-width: 210px;
 }
 
+.body-text,
+.footer-text {
+  font-family: "light";
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -138,7 +157,6 @@ img {
   font-weight: bold;
   margin: 0px;
 }
-
 
 .text-holder {
   display: flex;
@@ -173,15 +191,6 @@ img {
   padding: 25px;
 }
 
-/* .form-container {
-  border: 2px solid black;
-  height: 500px;
-  width: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 .main-content {
   display: flex;
   flex-direction: column;
@@ -196,28 +205,25 @@ img {
   align-items: center;
   border: thin solid #5356A4;
   border-radius: 2px;
-
 }
 
 .form < label {
-background-color: #FFFFFF;
-/* font-family: */
-font-size: 14px;
-color: #1F1F3D;
-border-color: #353567;
-border-width: thin;
-display: flex;
-
+  background-color: #FFFFFF;
+  font-size: 14px;
+  color: #1F1F3D;
+  border-color: #353567;
+  border-width: thin;
+  display: flex;
 }
 
 .form > button {
-background-color: #5356A4;
-/* font-family: */
-font-size: 14px;
-color: #E9E9F3;
-border-color: #353567;
-border-width: thin;
-display: flex;
-flex-direction: center;
-padding: 10px;
-margin: 0px;
+  background-color: #5356A4;
+  font-size: 14px;
+  color: #E9E9F3;
+  border-color: #353567;
+  border-width: thin;
+  display: flex;
+  flex-direction: center;
+  padding: 10px;
+  margin: 0px;
+}

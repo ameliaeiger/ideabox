@@ -4,22 +4,23 @@ class Idea {
     this.title = title;
     this.body = body;
     this.star = false;
+    this.src = "assets/star.svg";
   }
 
   updateIdea() {
     if (!this.star) {
       this.star = true;
-      starImage = "assets/star-active.svg"
+      this.src = "assets/star-active.svg"
     } else if (this.star) {
       this.star = false;
-      starImage = "assets/star.svg";
+      this.src = "assets/star.svg";
     }
   }
 
   generateHtml() {
-    let string = `<article class="idea-card card" id="${this.id}">
+    var string = `<article class="idea-card card" id="${this.id}">
         <header class="idea-card header">
-          <img class="favorite-star" src="${starImage}">
+          <img class="favorite-star" src="${this.src}">
           <img class="deletable" src="assets/delete.svg">
         </header>
         <div class="text-holder">
@@ -33,7 +34,6 @@ class Idea {
         </footer>
       </article>`
 
-    return string
+    return string;
   }
-
 }
