@@ -20,11 +20,11 @@
       - Should be able to toggle between filled in star (favorited) and not filled in star (not favorited)
       - When delete or favorite any card, should not see the page reload
 
-      <img width="994" alt="Screen Shot 2022-04-18 at 2 45 12 PM" src="https://user-images.githubusercontent.com/28677929/163875720-40b669e1-d272-4562-bc30-3fdf38400c76.png">
+<img width="1136" alt="Screen Shot 2022-04-18 at 3 34 49 PM" src="https://user-images.githubusercontent.com/28677929/163883651-4a30c0e4-4b90-4a34-a7a8-8688d3d38d67.png">
 
-      <img width="1347" alt="Screen Shot 2022-04-18 at 2 37 58 PM" src="https://user-images.githubusercontent.com/28677929/163875890-10289dd5-61e8-423b-a6fe-a581ec2d182f.png">
+<img width="1251" alt="Screen Shot 2022-04-18 at 3 51 16 PM" src="https://user-images.githubusercontent.com/28677929/163883755-2d82b0b8-aaea-461a-8f81-00dd4156673c.png">
 
-      <img width="1136" alt="Screen Shot 2022-04-18 at 3 34 49 PM" src="https://user-images.githubusercontent.com/28677929/163881632-355ea5c6-d0c1-4bb8-a356-01329b26b846.png">
+<img width="1251" alt="Screen Shot 2022-04-18 at 3 51 16 PM" src="https://user-images.githubusercontent.com/28677929/163883815-5f21fe33-518a-42e6-a7fd-514973380157.png">
 
 ## Technologies Used
 * JavaScript
