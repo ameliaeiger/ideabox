@@ -9,15 +9,17 @@ class Idea {
   updateIdea() {
     if (!this.star) {
       this.star = true;
+      starImage = "assets/star-active.svg"
     } else if (this.star) {
       this.star = false;
+      starImage = "assets/star.svg";
     }
   }
 
   generateHtml() {
     let string = `<article class="idea-card card" id="${this.id}">
         <header class="idea-card header">
-          <img src="assets/star-active.svg">
+          <img class="favorite-star" src="${starImage}">
           <img class="deletable" src="assets/delete.svg">
         </header>
         <div class="text-holder">
@@ -31,7 +33,7 @@ class Idea {
         </footer>
       </article>`
 
-      return string
+    return string
   }
 
 }
