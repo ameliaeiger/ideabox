@@ -3,6 +3,7 @@
 var ideaList = [];
 var favoriteIdeas = [];
 var brandNewIdea = "";
+var starImage = "assets/star.svg";
 
 
 // Query Selectors:
@@ -24,6 +25,26 @@ saveButton.addEventListener("click", clearInput);
 saveButton.addEventListener("mouseover", updateClass);
 
 savedCardSection.addEventListener("click", removeIdea);
+
+savedCardSection.addEventListener("click", toggleFavorite);
+//identify the card that will display an active favorite star
+//iterate through the ideaList array
+//check to make sure ids match
+
+
+// function handleClickEvents() {
+//   if (event.target.className === "deletable") {
+//     for (var i = 0; i < ideaList.length; i++) {
+//       if (ideaList[i].id === parseInt(event.target.closest("article").id)) {
+//         ideaList.splice(i, 1);
+//       }
+//     }
+//   }
+//   renderDisplay();
+// }
+// } else if {
+//   if (event.target.className === "favorite-star");
+// }
 // Functions and event handlers:
 function removeIdea(event) {
   if (event.target.className === "deletable") {
@@ -33,7 +54,18 @@ function removeIdea(event) {
       }
     }
   }
-    renderDisplay();
+  renderDisplay();
+}
+
+function toggleFavorite() {
+  if (event.target.className === "favorite-star") {
+    for (var i = 0; i < ideaList.length; i++) {
+      if (ideaList[i].id === parseInt(event.target.closest("article").id)) {
+        ideaList[i].updateIdea();
+      }
+    }
+  }
+  renderDisplay();
 }
 
 
@@ -41,20 +73,20 @@ function removeIdea(event) {
 function saveIdea() {
   event.preventDefault();
   if (formBody.value && formTitle.value) {
-  brandNewIdea = createNewInstance(formTitle.value, formBody.value);
-  if (checkForDuplicate(formTitle.value, formBody.value) === "Taken") {
-    console.log("this is a duplicate")
-    return
-  } else {
-    ideaList.push(brandNewIdea);
-  }
-  renderDisplay();
+    brandNewIdea = createNewInstance(formTitle.value, formBody.value);
+    if (checkForDuplicate(formTitle.value, formBody.value) === "Taken") {
+      console.log("this is a duplicate")
+      return
+    } else {
+      ideaList.push(brandNewIdea);
+    }
+    renderDisplay();
   }
 }
 
 function renderDisplay() {
   savedCardSection.innerHTML = ""
-  for (let i = 0; i < ideaList.length; i++){
+  for (let i = 0; i < ideaList.length; i++) {
     insertToDom(ideaList[i])
   }
 }
@@ -100,13 +132,3 @@ function updateClass() {
     saveButton.classList.remove("active");
   }
 }
-
-
-// function updateIdeaCard() {
-//   newCardTitle.innerText = brandNewIdea.title;
-//   newCardBody.innerText = brandNewIdea.body;
-// }
-
-// function insertObjectDataToNewCard(string) {
-//     savedCardSection.innerHTML = string
-// }
