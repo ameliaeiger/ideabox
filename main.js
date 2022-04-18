@@ -1,51 +1,22 @@
-// Global variables:
-
+// Global Variables:
 var ideaList = [];
-var favoriteIdeas = [];
 var brandNewIdea = "";
-var starImage = "assets/star.svg";
-
 
 // Query Selectors:
-
 var saveButton = document.querySelector(".save-button");
 var formTitle = document.getElementById("title");
 var formBody = document.getElementById("body");
 var newCardTitle = document.getElementById("new-title");
-var newCardBody = document.getElementById('new-body');
-let savedCardSection = document.querySelector(".grid-container")
+var newCardBody = document.getElementById("new-body");
+var savedCardSection = document.querySelector(".grid-container");
 
-// let clearInputFields = document.getElementById("title");
-// Event listeners:
-
+// Event Listeners:
 saveButton.addEventListener("click", saveIdea);
-
-saveButton.addEventListener("click", clearInput);
-
-saveButton.addEventListener("mouseover", updateClass);
-
+saveButton.addEventListener("mouseover", validateForm);
 savedCardSection.addEventListener("click", removeIdea);
-
 savedCardSection.addEventListener("click", toggleFavorite);
-//identify the card that will display an active favorite star
-//iterate through the ideaList array
-//check to make sure ids match
 
-
-// function handleClickEvents() {
-//   if (event.target.className === "deletable") {
-//     for (var i = 0; i < ideaList.length; i++) {
-//       if (ideaList[i].id === parseInt(event.target.closest("article").id)) {
-//         ideaList.splice(i, 1);
-//       }
-//     }
-//   }
-//   renderDisplay();
-// }
-// } else if {
-//   if (event.target.className === "favorite-star");
-// }
-// Functions and event handlers:
+// Functions and Event Handlers:
 function removeIdea(event) {
   if (event.target.className === "deletable") {
     for (var i = 0; i < ideaList.length; i++) {
@@ -68,56 +39,45 @@ function toggleFavorite() {
   renderDisplay();
 }
 
-
-//   Instantiates new idea(object) >> pushes idea(object) to array
 function saveIdea() {
   event.preventDefault();
   if (formBody.value && formTitle.value) {
     brandNewIdea = createNewInstance(formTitle.value, formBody.value);
     if (checkForDuplicate(formTitle.value, formBody.value) === "Taken") {
-      console.log("this is a duplicate")
-      return
+      return;
     } else {
       ideaList.push(brandNewIdea);
     }
+    clearInput();
     renderDisplay();
   }
 }
 
 function renderDisplay() {
-  savedCardSection.innerHTML = ""
-  for (let i = 0; i < ideaList.length; i++) {
-    insertToDom(ideaList[i])
+  savedCardSection.innerHTML = "";
+  for (var i = 0; i < ideaList.length; i++) {
+    insertToDom(ideaList[i]);
   }
 }
 
 function insertToDom(ideaObject) {
-  let htmlString = ideaObject.generateHtml();
-  let inner = document.createElement("div");
-  inner.classList.add("cardDiv")
-  inner.innerHTML = htmlString
+  var htmlString = ideaObject.generateHtml();
+  var inner = document.createElement("div");
+  inner.classList.add("cardDiv");
+  inner.innerHTML = htmlString;
   savedCardSection.appendChild(inner);
 }
 
-// -- Checks ideaList for a duplicate card
 function checkForDuplicate(title, body) {
-  for (let i = 0; i < ideaList.length; i++) {
+  for (var i = 0; i < ideaList.length; i++) {
     if (ideaList[i].body === body && ideaList[i].title === title) {
-      console.log("Taken")
-      return "Taken"
+      return "Taken";
     }
   }
 }
 
-
-//   Instantiates new idea(object)
 function createNewInstance(title, body) {
   return new Idea(title, body);
-}
-
-//   Push object to array
-function pushToArray(brandNewIdea) {
-  ideaList.push(brandNewIdea);
 }
 
 function clearInput() {
@@ -125,7 +85,7 @@ function clearInput() {
   formBody.value = '';
 }
 
-function updateClass() {
+function validateForm() {
   if (formBody.value && formTitle.value) {
     saveButton.classList.add("active");
   } else if (!formBody.value && !formTitle.value) {
